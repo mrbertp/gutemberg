@@ -1,0 +1,49 @@
+---
+output:
+  pdf_document: default
+
+documentclass: article
+
+classoption:
+- 11pt
+- a4paper
+- onecolumn
+- twoside
+- notitlepage
+
+fontenc: T1
+fontfamily: palatino
+
+linestretch: 1.0
+
+geometry:
+- inner=2.5cm
+- outer=2cm
+- top=3cm
+- bottom=3cm
+- headsep=1cm
+- headheight=1cm
+
+links-as-notes: true
+
+header-includes:
+
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhead[OR,EL]{\rightmark}
+- \fancyhead[OL,ER]{`r params$summary`}
+- \fancyhead[C]{}
+- \fancyfoot[OR,EL]{\thepage}
+- \fancyfoot[OL,ER]{}
+- \fancyfoot[C]{}
+ 
+- \usepackage{titlesec}
+- \titlespacing{\section}{0cm}{0.75cm}{0.75cm}
+- \titlespacing{\subsection}{0cm}{0.5cm}{0.5cm}
+- \titlespacing{\subsubsection}{0cm}{0.25cm}{0.25cm}
+
+- \usepackage{parskip}
+- \setlength{\parskip}{0.5cm}
+
+#- \usepackage{showframe}
+

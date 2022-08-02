@@ -1,0 +1,48 @@
+---
+output:
+  pdf_document: default
+
+documentclass: article
+
+classoption:
+- 10pt
+- a5paper
+- onecolumn
+- twoside
+- notitlepage
+
+fontenc: T1
+fontfamily: romande
+
+linestretch: 1.0
+
+geometry:
+- inner=2cm
+- outer=1cm
+- top=2.5cm
+- bottom=2.5cm
+- headsep=1cm
+- headheight=1cm
+
+header-includes:
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhead[OR,EL]{`r params$summary`}
+- \fancyhead[OL,ER]{`r params$signature`}
+- \fancyhead[C]{}
+- \renewcommand{\headrulewidth}{0.5pt}
+- \fancyfoot[OR,EL]{\thepage}
+- \fancyfoot[OL,ER]{}
+- \fancyfoot[C]{}
+- \renewcommand{\footrulewidth}{0.5pt}
+ 
+- \usepackage{titlesec}
+- \titlespacing{\section}{0cm}{0.75cm}{0.75cm}
+- \titlespacing{\subsection}{0cm}{0.5cm}{0.5cm}
+- \titlespacing{\subsubsection}{0cm}{0.25cm}{0.25cm}
+
+- \usepackage{parskip}
+- \setlength{\parskip}{0.5cm}
+
+#- \usepackage{showframe}
+
