@@ -16,11 +16,15 @@ gutemberg is a tool for automatic and modular document typesetting and formattin
 
     or
 
-    b) Download the zip of this repository: **Code > Download ZIP**
+    b) Download the zip of this repository: **Code > Download ZIP** and extract it somewhere.
 
-2. Launch the WSL and navigate to the repository.
+2. Launch the WSL inside the repository:
 
-4. Execute the installer: `./scripts/installer.sh`
+    1. Open the folder.
+    2. `Shift` + `Right click` inside the folder.
+    3. Click on "Open Linux shell here".
+
+3. Execute the installer: `./scripts/installer.sh`
 
     This script will:
     
