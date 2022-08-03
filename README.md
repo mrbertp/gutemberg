@@ -6,7 +6,13 @@ gutemberg is a tool for automatic and modular document typesetting and formattin
 
 ## Prerequisites
 
-- Windows Subsystem for Linux (WSL) (Debian)
+A. Using Windows:
+    
+   - Windows Subsystem for Linux (WSL) [(Debian)](https://www.microsoft.com/store/productId/9MSVKQC78PK6)
+    
+B. Using Linux:
+    
+   - Debian distribution
 
 ## Installation
 
@@ -16,7 +22,7 @@ gutemberg is a tool for automatic and modular document typesetting and formattin
 
     or
 
-    b) Download the zip of this repository: **Code > Download ZIP** and extract it somewhere.
+    b) Download the zip of this repository (**Code > Download ZIP**) and extract it somewhere.
 
 2. Launch the WSL inside the repository:
 
@@ -28,8 +34,8 @@ gutemberg is a tool for automatic and modular document typesetting and formattin
 
     This script will:
     
-    - update and upgrade *system packages*
-    - install *R*
-    - install *pandoc*
-    - install *rmarkdown*, from R
-    - install *tinytex*, from R
+      - update and upgrade *system packages*
+      - install *R*
+      - install *pandoc*
+      - install *rmarkdown*, from R
+      - install *tinytex*, from R
