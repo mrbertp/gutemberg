@@ -67,7 +67,9 @@ params:
 
 |Genotype                         |T (ºC)|Gen. time (h)|
 |:--------------------------------|-----:|------------:|
+|wt                               |25ºC  |7            |
 |wt                               |28ºC  |4.5          |
+|bqt1$\Delta$ sad1.2              |25ºC  |7            |
 |imp1$\Delta$ bqt1$\Delta$ sad1.2 |25ºC  |9.5          |
 
 4. Centrifuge for 3 min at 3000 rpm.
