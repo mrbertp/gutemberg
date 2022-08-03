@@ -10,21 +10,22 @@ gutemberg is a tool for automatic and modular document typesetting and formattin
 
 ## Installation
 
-1. Clone this repository into your computer:
+1. Get this repository in your computer:
 
-> > a. `git clone https://github.com/mrbertp/gutemberg.git`
+    a) Clone this repository: `git clone https://github.com/mrbertp/gutemberg.git`
 
-> or
+    or
 
-> b. Download the zip of this repository:
+    b) Download the zip of this repository: **Code > Download ZIP**
 
-> > `Code > Download ZIP`
+2. Launch the WSL and navigate to the repository.
 
-2. Launch the WSL.
+4. Execute the installer: `./scripts/installer.sh`
 
-3. Navigate to the repository.
-
-4. Execute the `installer` script:
-
-> `./scripts/installer.sh`
-
+    This script will:
+    
+    - update and upgrade *system packages*
+    - install *R*
+    - install *pandoc*
+    - install *rmarkdown*, from R
+    - install *tinytex*, from R
