@@ -1,3 +1,6 @@
+echo
+echo "[program] gutemberg"
+
 while getopts :ph opt
 do
   case "$opt" in
@@ -20,10 +23,10 @@ do
        mkdir -p processed/$2s &&
        cat styles/$2.yaml raw/$1.md > processed/$1.Rmd &&
        echo "  [i] targeting file to be rendered..." &&
-       sudo sed -i "s|file.Rmd|$1.Rmd|g" scripts/render.R &&
-       echo "  [i] preparing render..." &&
-       sudo Rscript scripts/render.R &&
-       sudo sed -i "s|$1.Rmd|file.Rmd|g" scripts/render.R ;;
+       sudo sed -i "s|file.Rmd|$1.Rmd|g" scripts/renderer.R &&
+       echo "  [i] calling renderer..." &&
+       sudo Rscript scripts/renderer.R &&
+       sudo sed -i "s|$1.Rmd|file.Rmd|g" scripts/renderer.R ;;
   esac
 done
 

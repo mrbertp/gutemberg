@@ -2,7 +2,7 @@
 output:
   pdf_document: default
 
-documentclass: article
+documentclass: book
 
 classoption:
 - 11pt
@@ -31,8 +31,8 @@ header-includes:
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
 - \fancyhead[OR,EL]{\rightmark}
-- \fancyhead[OL,ER]{`r params$summary`}
-- \fancyhead[C]{}
+- \fancyhead[OL,ER]{\leftmark}
+- \fancyhead[C]{\chaptermark}
 - \fancyfoot[OR,EL]{\thepage}
 - \fancyfoot[OL,ER]{}
 - \fancyfoot[C]{}
