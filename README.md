@@ -42,7 +42,7 @@ B. Using Linux:
     
    If the folder is inside Windows filesystem, you will have already full permission.
 
-4. Execute the installer: `./scripts/installer.sh`
+4. Execute the installer: `./installer/installer.sh`
 
     This script will:
     
@@ -51,3 +51,9 @@ B. Using Linux:
       - install *pandoc*
       - install *rmarkdown*, from R
       - install *tinytex*, from R
+
+## Usage
+
+For information on how to use gutemberg, refer to the command help, executing:
+
+`./scripts/gutemberg -h`
