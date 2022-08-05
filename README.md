@@ -30,7 +30,19 @@ B. Using Linux:
     2. `Shift` + `Right click` inside the folder.
     3. Click on "Open Linux shell here".
 
-3. Execute the installer: `./scripts/installer.sh`
+3. If the folder is inside Linux filesystem (Linux operating system or WSL), make sure that you set the correct file permissions.
+
+    For this, execute:
+    
+    `chmod 777 *`
+    
+    `chmod 777 */*`
+    
+    `chmod 777 */*/*`
+    
+   If the folder is inside Windows filesystem, you will have already full permission.
+
+4. Execute the installer: `./scripts/installer.sh`
 
     This script will:
     
