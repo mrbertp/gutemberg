@@ -1,0 +1,26 @@
+trying URL 'https://yihui.org/tinytex/TinyTeX-1.tar.gz'
+Content type 'application/octet-stream' length 69143160 bytes (65.9 MB)
+==================================================
+downloaded 65.9 MB
+
+tlmgr option sys_bin ~/bin
+tlmgr: setting option sys_bin to /root/bin.
+tlmgr: updating /root/.TinyTeX/tlpkg/texlive.tlpdb
+tlmgr install almendra bookman charter romande
+tlmgr: package repository https://ctan.javinator9889.com/systems/texlive/tlnet (verified)
+[1/4, ??:??/??:??] install: almendra [308k]
+[2/4, 00:00/00:00] install: bookman [273k]
+[3/4, 00:01/00:02] install: charter [172k]
+[4/4, 00:01/00:01] install: romande [461k]
+running mktexlsr ...
+done running mktexlsr.
+running updmap-sys ...
+done running updmap-sys.
+tlmgr: package log updated: /root/.TinyTeX/texmf-var/web2c/tlmgr.log
+tlmgr: command log updated: /root/.TinyTeX/texmf-var/web2c/tlmgr-commands.log
+tlmgr option repository 'https://ctan.javinator9889.com/systems/texlive/tlnet'
+tlmgr: setting default package repository to https://ctan.javinator9889.com/systems/texlive/tlnet
+tlmgr: updating /root/.TinyTeX/tlpkg/texlive.tlpdb
+tlmgr update --list
+tlmgr: package repository https://ctan.javinator9889.com/systems/texlive/tlnet (verified)
+tlmgr: no updates available
