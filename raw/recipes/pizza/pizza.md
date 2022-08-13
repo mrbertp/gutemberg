@@ -1,12 +1,15 @@
-author: "Carmen Julia & William"
-title: "Pizza"
-subtitle: "The healthy way"
 params:
-  summary: "Healthy pizza"
+  title: "Pizza"
+  subtitle: "The healthy way"
+  runningtitle: "Healthy pizza"
+  author:
+    - Carmen Julia
+    - William
   signature: "Julia and William"
+
 ---
 
-## INGREDIENTS
+## Ingredients
 
 \vspace{-0.5cm}
 \begin{tabbing}
@@ -24,7 +27,7 @@ params:
 \end{tabbing}
 \vspace{-0.5cm}
 
-## KITCHENWARE
+## Kitchenware
 
 \vspace{-0.5cm}
 \begin{tabbing}
@@ -37,37 +40,27 @@ params:
 \end{tabbing}
 \vspace{-0.5cm}
 
-## PREPARATION
+## Preparation
 
 1. Mix flour and salt in a bowl.
 
-
 2. Prepare 300 ml of lukewarm water. Stir together fresh yeast and about 3-4 tbsp of water until yeast is fully dissolved.
-
 
 3. Add yeast to the flour and mix well.
 
-
 4. Gradually add the remaining water, while mixing well to form a soft dough.
-
 
 5. Knead for about 5 min before adding the olive oil. Add the oil and knead for at least 5-8min until the dough is smooth and elastic.
 
-
 6. Divide dough in half and roll both parts into balls. Place balls on two separate floured plates and additionally dust with a bit of flour. Cover with plastic wrap or damp kitchen towel.
-
 
 7. Let dough rise for about 2h. Prepare tomato sauce and pizza toppings in the meantime.
 
-
 8. Preheat oven to its highest setting (circulating air/Umluft).
-
 
 9. When the dough has risen, stretch by hand or roll out to form pizza base.
 
-
 10. Once the oven is heated, precook base for about 6min. Take base out of the oven and add tomato sauce, mozzarella, and toppings of choice. By precooking the base, the crust and the bottom of the base will stay crispy, while the inside of the crust and the top of the base will stay soft and fluffy.
-
 
 11. Put pizza back into the oven and bake for another 6-10min until the crust is golden brown.
 

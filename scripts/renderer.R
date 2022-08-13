@@ -1,5 +1,5 @@
 library("rmarkdown")
 library("tinytex")
 
-render("processed/file.Rmd", output_format="all")
+render("processed/placeholder.Rmd", output_format="all")
 

@@ -2,7 +2,7 @@ while getopts :ph opt
 do
   case "$opt" in
     h) echo
-       echo -e "\tSUMMARY: gutemberg is a tool for document typesetting and formatting"
+       echo -e "\tSUMMARY: automatic and modular document typesetting and formatting"
        echo 
        echo -e "\tUSAGE: gutemberg [-OPTION] [FILE] [STYLE]"
        echo
@@ -17,19 +17,28 @@ do
        echo
        ;;
     p) shift
+       filename=$(basename $1 .md)
+       stylename=$(basename $2 .yaml)
+       images=$(dirname $1)/images
        echo
-       echo -e "[gutemberg] Processing $1 as $2:"
+       echo -e "[gutemberg] Processing '$filename' with style '$stylename'"
        echo
        echo -e "\tbuilding RMarkdown document..." &&
-       mkdir -p processed/$2s &&
-       cat styles/$2.yaml raw/$1.md > processed/$1.Rmd &&
+       mkdir -p processed/$stylename &&
+       cat $2 $1 > processed/$stylename/$filename.Rmd &&
+       ( ( cp -r $images processed/$stylename &> /dev/null &&
+         ( [[ $(\ls -A $images) ]] || echo -e "\tWARNING: 'images' folder is empty" ) ) ||
+         echo -e "\tWARNING: 'images' folder is absent" ) &&
        echo -e "\ttargeting RMarkdown document..." &&
-       sudo sed -i "s|file.Rmd|$1.Rmd|g" scripts/renderer.R &&
+       sudo sed -i "s|\/.*\.Rmd|\/$stylename\/$filename\.Rmd|g" scripts/renderer.R &&
        echo -e "\trendering..." &&
        sudo Rscript scripts/renderer.R &> logs/renderer.log &&
-       sudo sed -i "s|$1.Rmd|file.Rmd|g" scripts/renderer.R &&
-       echo
-       echo -e "[gutemberg] Document generated at: processed/$1"
+       echo -e "\tresetting renderer..." &&
+       sudo sed -i "s|\/.*\.Rmd|\/placeholder\.Rmd|g" scripts/renderer.R &&
+       echo -e "\tcleaning temporary files..." &&
+       rm -fr processed/$stylename/images/ &&
+       echo &&
+       echo -e "[gutemberg] Document generated: processed/$stylename/$filename.pdf"
        echo
        ;;
   esac

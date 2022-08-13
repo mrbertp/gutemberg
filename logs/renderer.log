@@ -1,15 +1,145 @@
 
-[program] renderer.R
-  [i] rendering...
 
-
-processing file: pizza.Rmd
-  |                                                                              |                                                                      |   0%  |                                                                              |......................................................................| 100%
+processing file: chromo-workflow.Rmd
+  |                                                                              |                                                                      |   0%  |                                                                              |...                                                                   |   4%
    inline R code fragments
 
+  |                                                                              |......                                                                |   9%
+label: orientation (with options) 
+List of 6
+ $ echo      : logi FALSE
+ $ fig.cap   : chr "Horizontal (incorrect) and vertical (correct) orientation of a cell."
+ $ fig.show  : chr "hold"
+ $ fig.pos   : chr "H"
+ $ fig.align : chr "center"
+ $ out.height: chr "6cm"
 
-output file: pizza.knit.md
+  |                                                                              |.........                                                             |  13%
+  ordinary text without R code
 
-/usr/bin/pandoc +RTS -K512m -RTS pizza.knit.md --to latex --from markdown+autolink_bare_uris+tex_math_single_backslash --output pizza.tex --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --highlight-style tango --pdf-engine pdflatex --variable graphics --include-in-header /tmp/RtmpXwsAEO/rmarkdown-str9feb4fbd9ee3.html 
+  |                                                                              |............                                                          |  17%
+label: mainfolder (with options) 
+List of 5
+ $ echo      : logi FALSE
+ $ fig.cap   : chr "Contents of the mainfolder"
+ $ fig.align : chr "center"
+ $ fig.pos   : chr "H"
+ $ out.height: chr "5cm"
 
-Output created: pizza.pdf
+  |                                                                              |...............                                                       |  22%
+  ordinary text without R code
+
+  |                                                                              |..................                                                    |  26%
+label: macro (with options) 
+List of 5
+ $ echo      : logi FALSE
+ $ fig.cap   : chr "Setting the `path` variable to the path of our main folder in the ImageJ macro"
+ $ fig.align : chr "center"
+ $ fig.pos   : chr "H"
+ $ out.height: chr "5cm"
+
+  |                                                                              |.....................                                                 |  30%
+  ordinary text without R code
+
+  |                                                                              |........................                                              |  35%
+label: macro_window (with options) 
+List of 5
+ $ echo      : logi FALSE
+ $ fig.cap   : chr "Selecting `batchmacro` folder as Input and Output directory"
+ $ fig.align : chr "center"
+ $ fig.pos   : chr "H"
+ $ out.height: chr "7cm"
+
+  |                                                                              |...........................                                           |  39%
+  ordinary text without R code
+
+  |                                                                              |..............................                                        |  43%
+label: chromoL (with options) 
+List of 5
+ $ echo      : logi FALSE
+ $ fig.cap   : chr "Choosing the latest version of a Large tier instance of Chromo in Chromo website"
+ $ fig.align : chr "center"
+ $ fig.pos   : chr "H"
+ $ out.height: chr "8cm"
+
+  |                                                                              |.................................                                     |  48%
+  ordinary text without R code
+
+  |                                                                              |.....................................                                 |  52%
+label: localfile (with options) 
+List of 5
+ $ echo      : logi FALSE
+ $ fig.cap   : chr "Choosing the local (.csv) file to be loaded in Chromo"
+ $ fig.align : chr "center"
+ $ fig.pos   : chr "H"
+ $ out.height: chr "9cm"
+
+  |                                                                              |........................................                              |  57%
+  ordinary text without R code
+
+  |                                                                              |...........................................                           |  61%
+label: download (with options) 
+List of 5
+ $ echo      : logi FALSE
+ $ fig.cap   : chr "DOWNLOAD DATA button in Data Upload tab"
+ $ fig.align : chr "center"
+ $ fig.pos   : chr "H"
+ $ out.height: chr "5cm"
+
+  |                                                                              |..............................................                        |  65%
+  ordinary text without R code
+
+  |                                                                              |.................................................                     |  70%
+label: segmentation (with options) 
+List of 5
+ $ echo     : logi FALSE
+ $ fig.cap  : chr "Settings for Segmentation"
+ $ fig.align: chr "center"
+ $ fig.pos  : chr "H"
+ $ out.width: chr "8cm"
+
+  |                                                                              |....................................................                  |  74%
+  ordinary text without R code
+
+  |                                                                              |.......................................................               |  78%
+label: spectrogram (with options) 
+List of 5
+ $ echo      : logi FALSE
+ $ fig.cap   : chr "Settings for Spectrum"
+ $ fig.align : chr "center"
+ $ fig.pos   : chr "H"
+ $ out.height: chr "8cm"
+
+  |                                                                              |..........................................................            |  83%
+  ordinary text without R code
+
+  |                                                                              |.............................................................         |  87%
+label: distribution (with options) 
+List of 5
+ $ echo      : logi FALSE
+ $ fig.cap   : chr "Settings for Distributions"
+ $ fig.align : chr "center"
+ $ fig.pos   : chr "H"
+ $ out.height: chr "8cm"
+
+  |                                                                              |................................................................      |  91%
+  ordinary text without R code
+
+  |                                                                              |...................................................................   |  96%
+label: motifs (with options) 
+List of 5
+ $ echo      : logi FALSE
+ $ fig.cap   : chr "Settings for Motifs"
+ $ fig.align : chr "center"
+ $ fig.pos   : chr "H"
+ $ out.height: chr "18cm"
+
+  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+output file: chromo-workflow.knit.md
+
+/usr/bin/pandoc +RTS -K512m -RTS chromo-workflow.knit.md --to latex --from markdown+autolink_bare_uris+tex_math_single_backslash --output chromo-workflow.tex --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --highlight-style tango --pdf-engine pdflatex --variable graphics --include-in-header /tmp/RtmpBV4Eb8/rmarkdown-str8811791132f5.html 
+
+Output created: chromo-workflow.pdf
