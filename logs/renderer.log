@@ -1,145 +1,38 @@
 
 
-processing file: chromo-workflow.Rmd
-  |                                                                              |                                                                      |   0%  |                                                                              |...                                                                   |   4%
-   inline R code fragments
-
-  |                                                                              |......                                                                |   9%
-label: orientation (with options) 
-List of 6
- $ echo      : logi FALSE
- $ fig.cap   : chr "Horizontal (incorrect) and vertical (correct) orientation of a cell."
- $ fig.show  : chr "hold"
- $ fig.pos   : chr "H"
- $ fig.align : chr "center"
- $ out.height: chr "6cm"
-
-  |                                                                              |.........                                                             |  13%
+processing file: pizza.Rmd
+  |                                                                              |                                                                      |   0%  |                                                                              |..........                                                            |  14%
   ordinary text without R code
 
-  |                                                                              |............                                                          |  17%
-label: mainfolder (with options) 
-List of 5
- $ echo      : logi FALSE
- $ fig.cap   : chr "Contents of the mainfolder"
- $ fig.align : chr "center"
- $ fig.pos   : chr "H"
- $ out.height: chr "5cm"
-
-  |                                                                              |...............                                                       |  22%
-  ordinary text without R code
-
-  |                                                                              |..................                                                    |  26%
-label: macro (with options) 
-List of 5
- $ echo      : logi FALSE
- $ fig.cap   : chr "Setting the `path` variable to the path of our main folder in the ImageJ macro"
- $ fig.align : chr "center"
- $ fig.pos   : chr "H"
- $ out.height: chr "5cm"
-
-  |                                                                              |.....................                                                 |  30%
-  ordinary text without R code
-
-  |                                                                              |........................                                              |  35%
-label: macro_window (with options) 
-List of 5
- $ echo      : logi FALSE
- $ fig.cap   : chr "Selecting `batchmacro` folder as Input and Output directory"
- $ fig.align : chr "center"
- $ fig.pos   : chr "H"
- $ out.height: chr "7cm"
-
-  |                                                                              |...........................                                           |  39%
-  ordinary text without R code
+  |                                                                              |....................                                                  |  29%
+label: unnamed-chunk-1 (with options) 
+List of 1
+ $ echo: logi FALSE
 
   |                                                                              |..............................                                        |  43%
-label: chromoL (with options) 
-List of 5
- $ echo      : logi FALSE
- $ fig.cap   : chr "Choosing the latest version of a Large tier instance of Chromo in Chromo website"
- $ fig.align : chr "center"
- $ fig.pos   : chr "H"
- $ out.height: chr "8cm"
-
-  |                                                                              |.................................                                     |  48%
-  ordinary text without R code
-
-  |                                                                              |.....................................                                 |  52%
-label: localfile (with options) 
-List of 5
- $ echo      : logi FALSE
- $ fig.cap   : chr "Choosing the local (.csv) file to be loaded in Chromo"
- $ fig.align : chr "center"
- $ fig.pos   : chr "H"
- $ out.height: chr "9cm"
+   inline R code fragments
 
   |                                                                              |........................................                              |  57%
-  ordinary text without R code
+label: unnamed-chunk-2 (with options) 
+List of 1
+ $ echo: logi FALSE
 
-  |                                                                              |...........................................                           |  61%
-label: download (with options) 
-List of 5
- $ echo      : logi FALSE
- $ fig.cap   : chr "DOWNLOAD DATA button in Data Upload tab"
- $ fig.align : chr "center"
- $ fig.pos   : chr "H"
- $ out.height: chr "5cm"
+  |                                                                              |..................................................                    |  71%
+   inline R code fragments
 
-  |                                                                              |..............................................                        |  65%
-  ordinary text without R code
-
-  |                                                                              |.................................................                     |  70%
-label: segmentation (with options) 
-List of 5
- $ echo     : logi FALSE
- $ fig.cap  : chr "Settings for Segmentation"
- $ fig.align: chr "center"
- $ fig.pos  : chr "H"
- $ out.width: chr "8cm"
-
-  |                                                                              |....................................................                  |  74%
-  ordinary text without R code
-
-  |                                                                              |.......................................................               |  78%
-label: spectrogram (with options) 
-List of 5
- $ echo      : logi FALSE
- $ fig.cap   : chr "Settings for Spectrum"
- $ fig.align : chr "center"
- $ fig.pos   : chr "H"
- $ out.height: chr "8cm"
-
-  |                                                                              |..........................................................            |  83%
-  ordinary text without R code
-
-  |                                                                              |.............................................................         |  87%
-label: distribution (with options) 
-List of 5
- $ echo      : logi FALSE
- $ fig.cap   : chr "Settings for Distributions"
- $ fig.align : chr "center"
- $ fig.pos   : chr "H"
- $ out.height: chr "8cm"
-
-  |                                                                              |................................................................      |  91%
-  ordinary text without R code
-
-  |                                                                              |...................................................................   |  96%
-label: motifs (with options) 
-List of 5
- $ echo      : logi FALSE
- $ fig.cap   : chr "Settings for Motifs"
- $ fig.align : chr "center"
- $ fig.pos   : chr "H"
- $ out.height: chr "18cm"
+  |                                                                              |............................................................          |  86%
+label: unnamed-chunk-3 (with options) 
+List of 1
+ $ echo: logi FALSE
 
   |                                                                              |......................................................................| 100%
-  ordinary text without R code
+   inline R code fragments
 
 
-output file: chromo-workflow.knit.md
+output file: pizza.knit.md
 
-/usr/bin/pandoc +RTS -K512m -RTS chromo-workflow.knit.md --to latex --from markdown+autolink_bare_uris+tex_math_single_backslash --output chromo-workflow.tex --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --highlight-style tango --pdf-engine pdflatex --variable graphics --include-in-header /tmp/RtmpBV4Eb8/rmarkdown-str8811791132f5.html 
+/usr/bin/pandoc +RTS -K512m -RTS pizza.knit.md --to latex --from markdown+autolink_bare_uris+tex_math_single_backslash --output pizza.tex --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --highlight-style tango --pdf-engine pdflatex --variable graphics --include-in-header /tmp/RtmpqZxDXn/rmarkdown-str8646c321ef6.html 
+Warning: Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
+Warning: (lipsum)                'english' will be used instead.
 
-Output created: chromo-workflow.pdf
+Output created: pizza.pdf

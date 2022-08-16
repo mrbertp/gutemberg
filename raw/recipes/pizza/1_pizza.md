@@ -1,13 +1,44 @@
-params:
-  title: "Pizza"
-  subtitle: "The healthy way"
-  runningtitle: "Healthy pizza"
-  author:
-    - Carmen Julia
-    - William
-  signature: "Julia and William"
+<!-- set parameters in the R code chunk below -->
 
----
+```{r echo=FALSE}
+unlockBinding("params", env = .GlobalEnv)
+params$title <- "Pizza"
+params$subtitle <- "The healthy way"
+params$runningtitle <- "Healthy Pizza"
+params$author <- "Julia and William"
+params$signature <- "CJ and W"
+```
+
+\renewcommand{\maketitle}{
+  \thispagestyle{firstpage}  
+    \begin{center}
+      \Huge
+      \textbf{`r params$title`}
+      \par
+      \vspace{0.50cm}
+      \large
+      \textbf{`r params$runningtitle`}
+      \par
+      \vspace{0.20cm}
+      \small
+      \textbf{`r params$author`}
+      \par
+      \vspace{0cm}
+      \rule{0.4\textwidth}{0.5pt}
+    \end{center}
+}
+
+\newpage
+\maketitle
+
+\lhead[`r params$title`]{`r params$author`}
+\chead[]{}
+\rhead[`r params$author`]{`r params$title`}
+\lfoot[\thepage]{}
+\cfoot[]{}
+\rfoot[]{\thepage}
+
+<!-- start writing your RMarkdown document below -->
 
 ## Ingredients
 
@@ -64,3 +95,4 @@ params:
 
 11. Put pizza back into the oven and bake for another 6-10min until the crust is golden brown.
 
+\lipsum[11-15]

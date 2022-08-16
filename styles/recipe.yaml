@@ -1,13 +1,14 @@
 ---
 output:
-  pdf_document: default
+  pdf_document:
+    keep_tex: true
 
 documentclass: article
 
-title: "placeholder"
+title: ""
 
 classoption:
-- 11pt
+- 10pt
 - a5paper
 - onecolumn
 - twoside
@@ -29,33 +30,8 @@ geometry:
 links-as-notes: true
 
 header-includes:
-- \renewcommand\maketitle{
-    \thispagestyle{firstpage}
-      \begin{center}
-        \Huge
-        \textbf{`r params$title`}
-        \par
-        \vspace{0.50cm}
-        \large
-        \textbf{`r params$runningtitle`}
-        \par
-        \vspace{0.20cm}
-        \small
-        \textbf{`r params$author`}
-        \par
-        \vspace{0cm}
-        \rule{0.4\textwidth}{0.5pt}
-      \end{center}
-  }
-
 - \usepackage{fancyhdr}
-- \pagestyle{fancy}
-    \fancyhead[OR,EL]{`r params$title`}
-    \fancyhead[OL,ER]{\rightmark}
-    \fancyhead[C]{}
-    \fancyfoot[OR,EL]{\thepage}
-    \fancyfoot[OL,ER]{`r params$author`}
-    \fancyfoot[C]{}
+    \pagestyle{fancy}
     \renewcommand{\headrulewidth}{0pt}
     \renewcommand{\footrulewidth}{0pt}
 - \fancypagestyle{firstpage}{
@@ -65,19 +41,24 @@ header-includes:
     \fancyfoot[OR,EL]{\thepage}
     \fancyfoot[OL,ER]{}
     \fancyfoot[C]{}
-    \renewcommand{\headrulewidth}{0pt}
-    \renewcommand{\footrulewidth}{0pt}
+    \renewcommand{\headrulewidth}{1pt}
+    \renewcommand{\footrulewidth}{1pt}
   }
-
 - \usepackage{titlesec}
-- \titlespacing{\section}{0cm}{0.75cm}{0.75cm}
-- \titlespacing{\subsection}{0cm}{0.5cm}{0.5cm}
-- \titlespacing{\subsubsection}{0cm}{0.25cm}{0.25cm}
-
+  \titlespacing{\section}{0cm}{0.75cm}{0.75cm}
+  \titlespacing{\subsection}{0cm}{0.5cm}{0.5cm}
+  \titlespacing{\subsubsection}{0cm}{0.25cm}{0.25cm}
 - \usepackage{parskip}
-- \setlength{\parskip}{0.5cm}
-
+  \setlength{\parskip}{0.5cm}
 - \usepackage{float}
-
+- \usepackage{lipsum}
 #- \usepackage{showframe}
+
+params:
+  title: "title-placeholder"
+  subtitle: "sub-placeholder"
+  runningtitle: "running-placeholder"
+  author: "author-placeholder"
+  signature: "signature-placeholder"
+---
 
