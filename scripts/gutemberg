@@ -1,0 +1,97 @@
+#!/usr/bin/bash
+
+while getopts :f:h opt
+do
+  case "$opt" in
+
+    h) echo
+       echo -e "\tSUMMARY: automatic and modular document typesetting and formatting"
+       echo 
+       echo -e "\tUSAGE: gutemberg [-OPTION] [FOLDER] [STYLE]"
+       echo
+       echo -e "\t\tOPTION:"
+       echo 
+       echo -e "\t\t  -h: shows help"
+       echo
+       echo -e "\t\t  -f: formats contents in FOLDER according to STYLE"
+       echo -e "\t\t        FOLDER: folder containing one or multiple (R)Markdown files"
+       echo -e "\t\t        STYLE: YAML file, containing formatting information"
+       echo
+       exit 1
+       ;;
+
+    f) shift
+       filename=$(basename $1)
+       stylename=$(basename $2 .yaml)
+       images=$1/images
+       
+       echo
+       echo -e "[gutemberg] Processing '$filename' contents with style '$stylename'"
+       echo
+       
+       echo -e "\tbuilding RMarkdown document..." &&
+       mkdir -p processed/$stylename &&
+       
+       { [[ $(\ls -A $1 | wc -l) -gt 1 ]] &&
+           echo -e "\tMultiple files detected" ||
+           [[ $(\ls -A $1 | wc -l) -eq 1 ]] &&
+             echo -e "\tIndividual file detected" ||
+             exit 1 ; } &&
+
+       cat $2 $(find $1 -maxdepth 1 -type f | sort) > processed/$stylename/$filename.Rmd &&
+
+       { { cp -r $images processed/$stylename &> /dev/null &&
+         { [[ $(\ls -A $images) ]] || echo -e "\tWARNING: 'images' folder is empty" ; } ; } ||
+         echo -e "\tWARNING: images folder is absent" ; } &&
+       
+       echo -e "\ttargeting RMarkdown document..." &&
+       sudo sed -i "s|\/.*\.Rmd|\/$stylename\/$filename\.Rmd|g" scripts/renderer.R &&
+       
+       echo -e "\trendering..." &&
+       sudo Rscript scripts/renderer.R &> logs/renderer.log ||
+         { echo -e "\tERROR at rendering. See logs/renderer.log" && exit 1 ; } &&
+       
+       echo -e "\tresetting renderer..." &&
+       sudo sed -i "s|\/.*\.Rmd|\/placeholder\.Rmd|g" scripts/renderer.R &&
+       
+       echo -e "\tcleaning temporary files..." &&
+       rm -fr processed/$stylename/images/ &&
+       
+       echo &&
+       echo -e "[gutemberg] Document generated: processed/$stylename/$filename.pdf"
+       echo
+       exit 0
+       ;;
+
+    :) echo
+       echo -e "\t$1 option requires an argument."
+       echo
+       echo -e "\tPlease, refer to command help by typing:"
+       echo
+       echo -e "\t\tgutemberg -h"
+       echo
+       exit 1
+       ;;
+
+    ?) echo
+       echo -e "\tUnknown option $1."
+       echo
+       echo -e "\tPlease, refer to command help by typing:"
+       echo
+       echo -e "\t\tgutemberg -h"
+       echo
+       exit 1
+       ;;
+
+  esac
+done
+
+echo
+echo -e "\tNo options used."
+echo
+echo -e "\tPlease, refer to command help by typing:"
+echo
+echo -e "\t\tgutemberg -h"
+echo
+
+exit 1

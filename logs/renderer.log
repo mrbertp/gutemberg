@@ -1,6 +1,6 @@
 
 
-processing file: pizza.Rmd
+processing file: book-example.Rmd
   |                                                                              |                                                                      |   0%  |                                                                              |..........                                                            |  14%
   ordinary text without R code
 
@@ -29,10 +29,10 @@ List of 1
    inline R code fragments
 
 
-output file: pizza.knit.md
+output file: book-example.knit.md
 
-/usr/bin/pandoc +RTS -K512m -RTS pizza.knit.md --to latex --from markdown+autolink_bare_uris+tex_math_single_backslash --output pizza.tex --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --highlight-style tango --pdf-engine pdflatex --variable graphics --include-in-header /tmp/RtmpqZxDXn/rmarkdown-str8646c321ef6.html 
+/usr/bin/pandoc +RTS -K512m -RTS book-example.knit.md --to latex --from markdown+autolink_bare_uris+tex_math_single_backslash --output book-example.tex --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --highlight-style tango --pdf-engine pdflatex --variable graphics --include-in-header /tmp/RtmpuZcZvk/rmarkdown-str56975f01a00e.html 
 Warning: Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
 Warning: (lipsum)                'english' will be used instead.
 
-Output created: pizza.pdf
+Output created: book-example.pdf
