@@ -14,6 +14,10 @@ B. Using Linux:
     
    - [Debian](www.debian.org) distribution
 
+For both options, you will also need to install:
+
+   - git (`sudo apt-get install git`)
+
 ## Installation
 
 1. Get this repository in your computer:
