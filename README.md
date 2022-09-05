@@ -12,7 +12,7 @@ A. Using Windows:
     
 B. Using Linux:
     
-   - Debian distribution
+   - [Debian](www.debian.org) distribution
 
 ## Installation
 
