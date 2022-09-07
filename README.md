@@ -61,3 +61,30 @@ For both options, you will also need to install:
 For information on how to use gutemberg, refer to the command help, executing:
 
 `./scripts/gutemberg -h`
+
+## Extensions
+
+You may find any of the following things useful when using gutemberg:
+
+### Make an alias of gutemberg
+
+If when using gutemberg, you find it tedious to execute the script the verbose way:
+
+`./scripts/gutemberg -f path/to/example/folder path/to/example/stylefile`
+
+you can add gutemberg to the list of aliases of the terminal you are using, just by adding this line to your aliases file (e.g. bash_aliases for bash interpreter):
+
+e.g. in Linux:
+
+`alias gutemberg='~/Desktop/gutemberg/scripts/gutemberg'`
+
+### Make a command of gutemberg
+
+You can add gutemberg to your commands by adding the path of the folder conteining gutemberg script to your $PATH variable:
+
+e.g. in Linux:
+
+add the line `export PATH=$PATH:~/Desktop/gutemberg/scripts` to your interpreter file (e.g. .bashrc for bash interpreter)
+
+and reload interpreter: `bash`
+
