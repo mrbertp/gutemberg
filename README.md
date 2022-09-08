@@ -44,7 +44,7 @@ For both options, you will also need to install:
     
     `chmod 777 */*/*`
     
-   If the folder is inside Windows filesystem, you will have already full permission.
+   If the folder is inside Windows filesystem, you should already have full permission.
 
 4. Execute the installer: `./installer/installer.sh`
 
