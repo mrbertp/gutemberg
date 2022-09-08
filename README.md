@@ -62,7 +62,7 @@ For information on how to use gutemberg, refer to the command help, executing:
 
 `./scripts/gutemberg -h`
 
-## Extensions
+## Extras
 
 You may find any of the following things useful when using gutemberg:
 
@@ -86,5 +86,12 @@ e.g. in Linux:
 
 add the line `export PATH=$PATH:~/Desktop/gutemberg/scripts` to your interpreter file (e.g. .bashrc for bash interpreter)
 
-and reload interpreter: `bash`
+and reload interpreter: e.g. `bash` for bash interpreter)
 
+### PDF viewer
+
+It will be useful if you use a PDF viewer with the ability to autoreload the PDF document when this is modified. This way, you can quickly see the changes you make when you process your document with gutemberg.
+
+For Linux, I would recommend using **zathura**, which you can install via apt-get: `sudo apt-get zathura`.
+
+For Windows, I would recommend using **SumatraPDF**, which you can download from its official [website](https://www.sumatrapdfreader.org/free-pdf-reader) and install it.
