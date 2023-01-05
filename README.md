@@ -95,3 +95,13 @@ It will be useful if you use a PDF viewer with the ability to autoreload the PDF
 For Linux, I would recommend using **zathura**, which you can install via apt-get: `sudo apt-get zathura`.
 
 For Windows, I would recommend using **SumatraPDF**, which you can download from its official [website](https://www.sumatrapdfreader.org/free-pdf-reader) and install it.
+
+## Troubleshooting
+
+### :warning: Vim starts in `replace` mode every time you open a document
+
+Out of the box, in Debian WSL in Windows, the Vim text editor will start in `replace` mode by default just after opening a document. This issue has been reported and closed in the vim [GitHub repository](https://github.com/vim/vim/issues/6365). One of the solutions given for this issue is the following:
+
+- Add this line to your `.vimrc` file:
+
+> `set t_u7=`
