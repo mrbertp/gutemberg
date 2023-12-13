@@ -1,10 +1,11 @@
 ---
 output:
-  pdf_document: default
+  pdf_document:
+    keep_tex: true
 
 documentclass: article
 
-title: "placeholder"
+title: ""
 
 classoption:
 - 11pt
@@ -12,71 +13,56 @@ classoption:
 - onecolumn
 - twoside
 
-fontenc: T1
-fontfamily: palatino
-
 linestretch: 1.0
 
 geometry:
-- inner=2.5cm
-- outer=2cm
-- top=3cm
-- bottom=3cm
-- headsep=1cm
-- headheight=1cm
+- inner=1.5cm # ok
+- outer=1cm # ok
+- top=2.5cm # ok
+- bottom=2cm # ok
+- headsep=1cm # ok
+- footskip=1cm
+- headheight=1cm # irrelevant
 
 links-as-notes: true
 
 header-includes:
-- \renewcommand\maketitle{
-    \thispagestyle{firstpage}
-      \begin{center}
-        \Huge
-        \textbf{`r params$title`}
-        \par
-        \vspace{0.50cm}
-        \large
-        \textbf{`r params$author`}
-        \par
-        \vspace{0.20cm}
-        \small
-        \textbf{`r params$date`}
-        \par
-        \vspace{0cm}
-      \end{center}
-  }
+- \usepackage{tgheros}
+  \renewcommand*\familydefault{\sfdefault}
+  \usepackage[T1]{fontenc}
 
 - \usepackage{fancyhdr}
-- \pagestyle{fancy}
-- \fancyhead[OR,EL]{\uppercase{`r params$runningtitle`}}
-- \fancyhead[OL,ER]{\rightmark}
-- \fancyhead[C]{\nouppercase{\leftmark}}
-- \fancyfoot[OR,EL]{\thepage}
-- \fancyfoot[OL,ER]{}
-- \fancyfoot[C]{Update `r params$date`}
-- \renewcommand{\headrulewidth}{0.5pt}
-- \renewcommand{\footrulewidth}{0.5pt}
-
-- \fancypagestyle{firstpage}{
-    \fancyhead[OR,EL]{}
-    \fancyhead[OL,ER]{}
-    \fancyhead[C]{}
-    \fancyfoot[OR,EL]{}
-    \fancyfoot[OL,ER]{}
-    \fancyfoot[C]{}
-    \renewcommand{\headrulewidth}{0.5pt}
-    \renewcommand{\footrulewidth}{0.5pt}
-  }
 
 - \usepackage{titlesec}
-- \titlespacing{\section}{0cm}{0.75cm}{0.75cm}
-- \titlespacing{\subsection}{0cm}{0.5cm}{0.5cm}
-- \titlespacing{\subsubsection}{0cm}{0.25cm}{0.25cm}
+  \titlespacing{\section}{0cm}{0.75cm}{0.75cm}
+  \titlespacing{\subsection}{0cm}{0.5cm}{0.5cm}
+  \titlespacing{\subsubsection}{0cm}{0.25cm}{0.25cm}
 
 - \usepackage{parskip}
-- \setlength{\parskip}{0.5cm}
+  \setlength{\parskip}{0.5cm}
 
 - \usepackage{float}
+#- \setlength{\LTpre}{16 pt}
+
+- \usepackage{hyperref}
+  \hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=blue
+  }
+
+- \usepackage{lipsum}
+
+- \usepackage[LGRgreek]{mathastext}
+  \MTgreekfont{lmss}\Mathastext
 
 #- \usepackage{showframe}
+
+params:
+  title: "title-placeholder"
+  subtitle: "subtitle-placeholder"
+  chapter: "chapter-placeholder"
+  abstract: "abstract-placeholder"
+  author: "author-placeholder"
+---
 

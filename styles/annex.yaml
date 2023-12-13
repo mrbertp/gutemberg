@@ -1,0 +1,73 @@
+---
+output:
+  pdf_document:
+    keep_tex: true
+bibliography: ../../bibs/compendium/intro.bib
+reference-section-title: "References"
+csl: ../../bibs/compendium/apa7th.csl
+
+documentclass: article
+
+title: ""
+
+classoption:
+- a4paper
+- onecolumn
+- twoside
+
+fontenc: T1
+fontfamily: palatino
+
+linestretch: 1.0
+
+geometry:
+- inner=1.5cm # ok
+- outer=1cm # ok
+- top=1.5cm # ok
+- bottom=1.5cm # ok
+- headsep=0.5cm # ok
+- footskip=1cm
+- headheight=0.5cm # irrelevant
+- includehead
+- includefoot
+
+links-as-notes: true
+
+header-includes:
+- \usepackage[english]{babel}
+- \usepackage[utf8]{inputenc}
+- \usepackage{multicol}
+- \setlength{\columnsep}{0.5cm}
+- \usepackage{fancyhdr}
+- \usepackage{titlesec}
+  \titlespacing{\section}{0cm}{0.75cm}{0.5cm}
+  \titlespacing{\subsection}{0cm}{0.5cm}{0.25cm}
+  \titlespacing{\subsubsection}{0cm}{0.5cm}{0.2cm}
+- \usepackage{hyperref}
+  \hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=blue
+  }
+- \usepackage{parskip}
+  \setlength{\parskip}{0.5cm}
+- \usepackage{float}
+- \usepackage{lipsum}
+#- \usepackage{showframe}
+- \usepackage[LGRgreek]{mathastext}
+  \MTgreekfont{lmss}\Mathastext
+- \usepackage{graphicx}
+- \usepackage{caption}
+- \usepackage{pdfpages}
+- \usepackage[titles]{tocloft}
+- \usepackage{booktabs}
+- \usepackage{biblatex}
+
+params:
+  title: "title-placeholder"
+  subtitle: "subtitle-placeholder"
+  chapter: "chapter-placeholder"
+  abstract: "abstract-placeholder"
+  author: "author-placeholder"
+---
+

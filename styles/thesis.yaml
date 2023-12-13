@@ -1,0 +1,63 @@
+---
+output:
+  word_document: default
+  pdf_document:
+    keep_tex: true
+
+documentclass: article
+
+title: ""
+
+classoption:
+- a4paper
+- onecolumn
+- twoside
+
+fontenc: T1
+fontfamily: palatino
+
+linestretch: 1.0
+
+geometry:
+- inner=1.5cm # ok
+- outer=1cm # ok
+- top=1.5cm # ok
+- bottom=1.5cm # ok
+- headsep=0.5cm # ok
+- footskip=1cm
+- headheight=0.5cm # irrelevant
+- includehead
+- includefoot
+
+links-as-notes: true
+
+header-includes:
+- \usepackage[english]{babel}
+- \usepackage{fancyhdr}
+- \usepackage{titlesec}
+  \titlespacing{\section}{0cm}{0.75cm}{0.75cm}
+  \titlespacing{\subsection}{0cm}{0.5cm}{0.5cm}
+  \titlespacing{\subsubsection}{0cm}{0.25cm}{0.25cm}
+- \usepackage{hyperref}
+  \hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=green
+  }
+- \usepackage{parskip}
+  \setlength{\parskip}{0.5cm}
+- \usepackage{float}
+- \usepackage{lipsum}
+#- \usepackage{lmodern}
+#- \usepackage{showframe}
+- \usepackage[LGRgreek]{mathastext}
+  \MTgreekfont{lmss}\Mathastext
+
+params:
+  title: "title-placeholder"
+  subtitle: "subtitle-placeholder"
+  chapter: "chapter-placeholder"
+  abstract: "abstract-placeholder"
+  author: "author-placeholder"
+---
+

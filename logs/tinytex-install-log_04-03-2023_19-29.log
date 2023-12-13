@@ -1,0 +1,28 @@
+trying URL 'https://yihui.org/tinytex/TinyTeX-1.tar.gz'
+Content type 'application/octet-stream' length 90757091 bytes (86.6 MB)
+==================================================
+downloaded 86.6 MB
+
+tlmgr option sys_bin ~/bin
+tlmgr: setting option sys_bin to /root/bin.
+tlmgr: updating /root/.TinyTeX/tlpkg/texlive.tlpdb
+tlmgr install fancyhdr lipsum palatino parskip setspace titlesec
+tlmgr: package repository https://mirrors.dotsrc.org/ctan/systems/texlive/tlnet (verified)
+[1/6, ??:??/??:??] install: fancyhdr [6k]
+[2/6, 00:00/00:00] install: lipsum [123k]
+[3/6, 00:00/00:00] install: palatino [319k]
+[4/6, 00:00/00:00] install: parskip [3k]
+[5/6, 00:00/00:00] install: setspace [8k]
+[6/6, 00:00/00:00] install: titlesec [20k]
+running mktexlsr ...
+done running mktexlsr.
+running updmap-sys ...
+done running updmap-sys.
+tlmgr: package log updated: /root/.TinyTeX/texmf-var/web2c/tlmgr.log
+tlmgr: command log updated: /root/.TinyTeX/texmf-var/web2c/tlmgr-commands.log
+tlmgr option repository 'https://mirrors.dotsrc.org/ctan/systems/texlive/tlnet'
+tlmgr: setting default package repository to https://mirrors.dotsrc.org/ctan/systems/texlive/tlnet
+tlmgr: updating /root/.TinyTeX/tlpkg/texlive.tlpdb
+tlmgr update --list
+tlmgr: package repository https://mirrors.dotsrc.org/ctan/systems/texlive/tlnet (verified)
+update:   texlive-scripts    [112k]: local:    66293, source:    66319

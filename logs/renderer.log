@@ -1,38 +1,59 @@
 
 
-processing file: book-example.Rmd
-  |                                                                              |                                                                      |   0%  |                                                                              |..........                                                            |  14%
-  ordinary text without R code
+processing file: compendium.Rmd
+1/25                   
+2/25 [unnamed-chunk-1] 
+3/25                   
+4/25 [unnamed-chunk-2] 
+5/25                   
+6/25 [unnamed-chunk-3] 
+7/25                   
+8/25 [unnamed-chunk-4] 
+9/25                   
+10/25 [unnamed-chunk-5] 
+11/25                   
+12/25 [unnamed-chunk-6] 
+13/25                   
+14/25 [unnamed-chunk-7] 
+15/25                   
+16/25 [unnamed-chunk-8] 
+17/25                   
+18/25 [unnamed-chunk-9] 
+19/25                   
+20/25 [unnamed-chunk-10]
+21/25                   
+22/25 [unnamed-chunk-11]
+23/25                   
+24/25 [unnamed-chunk-12]
+25/25                   
+output file: compendium.knit.md
 
-  |                                                                              |....................                                                  |  29%
-label: unnamed-chunk-1 (with options) 
-List of 1
- $ echo: logi FALSE
+/usr/bin/pandoc +RTS -K512m -RTS compendium.knit.md --to latex --from markdown+autolink_bare_uris+tex_math_single_backslash --output compendium.tex --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --highlight-style tango --pdf-engine pdflatex --variable graphics --include-in-header /tmp/RtmpOuAixb/rmarkdown-str1c4f25380bc8.html --filter /usr/bin/pandoc-citeproc 
+Warning: Package tocloft Warning: \@starttoc has already been redefined; tocloft bailing out. on input line 1156.
+Warning: Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+Warning: (biblatex)                Loading 'csquotes' recommended.
+Warning: LaTeX Warning: Label `p10' multiply defined.
+Warning: LaTeX Warning: Label `p10' multiply defined.
+Warning: LaTeX Warning: Label `p1' multiply defined.
+Warning: LaTeX Warning: Label `p15' multiply defined.
+Warning: LaTeX Warning: Label `p2' multiply defined.
+Warning: LaTeX Warning: Label `p2' multiply defined.
+Warning: LaTeX Warning: Label `p14' multiply defined.
+Warning: LaTeX Warning: Label `p18' multiply defined.
+Warning: LaTeX Warning: Label `p18' multiply defined.
+Warning: LaTeX Warning: Float too large for page by 7.82835pt on input line 1967.
+Warning: LaTeX Warning: Float too large for page by 10.84126pt on input line 2312.
+Warning: LaTeX Warning: Float too large for page by 13.02023pt on input line 2398.
+Warning: LaTeX Warning: Float too large for page by 12.32025pt on input line 2632.
+Warning: LaTeX Warning: There were multiply-defined labels.
 
-  |                                                                              |..............................                                        |  43%
-   inline R code fragments
-
-  |                                                                              |........................................                              |  57%
-label: unnamed-chunk-2 (with options) 
-List of 1
- $ echo: logi FALSE
-
-  |                                                                              |..................................................                    |  71%
-   inline R code fragments
-
-  |                                                                              |............................................................          |  86%
-label: unnamed-chunk-3 (with options) 
-List of 1
- $ echo: logi FALSE
-
-  |                                                                              |......................................................................| 100%
-   inline R code fragments
-
-
-output file: book-example.knit.md
-
-/usr/bin/pandoc +RTS -K512m -RTS book-example.knit.md --to latex --from markdown+autolink_bare_uris+tex_math_single_backslash --output book-example.tex --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --highlight-style tango --pdf-engine pdflatex --variable graphics --include-in-header /tmp/RtmpuZcZvk/rmarkdown-str56975f01a00e.html 
-Warning: Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
-Warning: (lipsum)                'english' will be used instead.
-
-Output created: book-example.pdf
+Output created: compendium.pdf
+Warning messages:
+1: In grep("^(LaTeX|Package [[:alnum:]]+) Warning:", x) :
+  input string 1218 is invalid in this locale
+2: In grep("^\\s*$", x) : input string 1218 is invalid in this locale
+3: In xfun::read_utf8(log) :
+  The file compendium.log is not encoded in UTF-8. These lines contain invalid UTF-8 characters: 1249
+4: In grep("^(LaTeX|Package [[:alnum:]]+) Warning:", x) :
+  input string 1249 is invalid in this locale
+5: In grep("^\\s*$", x) : input string 1249 is invalid in this locale
