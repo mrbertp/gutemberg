@@ -1,0 +1,146 @@
+<!-- set parameters in the R code chunk below -->
+
+```{r echo=FALSE}
+unlockBinding("params", env = .GlobalEnv)
+params$title <- "Lenguaje matemático. Conjuntos y números."
+params$subtitle <- "Grado en Matemáticas UNED"
+params$chapter <- "Relaciones de equivalencia"
+params$abstract <- ""
+params$author <- "Gerlachito's Maths"
+```
+
+\fancypagestyle{fancy}{
+  \fancyhead[OR,EL]{\large `r params$title`}
+  \fancyhead[OL,ER]{\large `r params$chapter`}
+  \fancyhead[C]{}
+  \fancyfoot[OR,EL]{\thepage}
+  \fancyfoot[OL,ER]{\large `r params$author`}
+  \fancyfoot[C]{}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\footrulewidth}{1pt}
+}
+
+\fancypagestyle{firstpage}{
+  \fancyhead[OR,EL]{\large `r params$title`}
+  \fancyhead[OL,ER]{\large `r params$chapter`}
+  \fancyhead[C]{}
+  \fancyfoot[OR,EL]{\thepage}
+  \fancyfoot[OL,ER]{\large `r params$author`}
+  \fancyfoot[C]{}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\footrulewidth}{1pt}
+}
+
+\renewcommand{\maketitle}{
+  \thispagestyle{firstpage}  
+    \Huge
+    \textbf{`r params$chapter`}
+    \par
+    \vspace{1cm}
+    \large
+    \textbf{`r params$abstract`}
+    \par
+    \vspace{1cm}
+}
+
+\pagestyle{fancy}
+\newpage
+\maketitle
+
+\fontsize{0.45cm}{0.45cm}\selectfont
+
+<!-- start writing your RMarkdown document below -->
+
+Dado el conjunto universo $\mathcal{U} \neq \emptyset$, sea una relación $\mathcal{R} \subset \mathcal{U} \times \mathcal{U}$. Esta relación puede tener una o más de las siguientes propiedades:
+
+(1) **Reflexiva**: si $\{(x,x): x \in \mathcal{U}\} \subset \mathcal{R}$, o en otros términos, si $x \mathcal{R} x, \forall x \in \mathcal{U}$.
+
+(2) **Simétrica**: si $\mathcal{R}^{-1} \in \mathcal{R}$, o en otros términos, si $\forall x,y \in \mathcal{U}, x \mathcal{R} y \land y \mathcal{R} x$.
+
+(3) **Antisimétrica**: si $\mathcal{R} \cap \mathcal{R} \subset \{(x,x): x \in \mathcal{U}\}$, o en otros términos si $\forall x,y \in \mathcal{U}, x \mathcal{R} y$ y $y \mathcal{R} x, x=y$.
+
+(4) **Transitiva**: si $\mathcal{R} \circ \mathcal{R} \subset \mathcal{R}$, o en otros términos, $\forall x,y,z \in \mathcal{U}, x \mathcal{R} y, y \mathcal{R} z, x \mathcal{R} z$.
+
+Sea $\mathcal{R}$ una relación definida en $\mathcal{U} \times \mathcal{U}$. Decimos que $\mathcal{R}$ es una relación de equivalencia si $\mathcal{R}$ es reflexiva, simétrica y transitiva.
+
+> **Def.: Clase de equivalencia**
+
+> > Sea $\mathcal{R}$ una relación de quivalencia y $x \in \mathcal{U}$.
+
+> > Definimos una clase de equivalencia de $x$ como un conjunto tal que:
+
+> > $[x] := \{y \in \mathcal{U}: x \mathcal{R} y\}$
+
+> > (donde $x$ es un representante de la clase equivalente)
+
+Supongamos que tenemos dos clases de equivalencia $[x], [\tilde{x}]$ de modo que:
+
+$[x] \cap [\tilde{x}] \neq \emptyset \iff \exists y \in \mathcal{U}$ tal que $y \in [x], y \in [\tilde{x}]$
+
+Esto implica que:
+
+$x \mathcal{R} y$ y $\tilde{x} \mathcal{R} y$
+
+$\tilde{x} \mathcal{R} y \iff y \mathcal{R} \tilde{x}$ ($\mathcal{R}$ es simétrica)
+
+$x \mathcal{R} y, y \mathcal{R} \tilde{x} \implies x \mathcal{R} \tilde{x}$ ($\mathcal{R}$ es transitiva)
+
+Por lo tanto:
+
+$[x] = [\tilde{x}]$
+
+**Nota**: Dos clases de equivalencia, o son disjuntas o son la misma.
+
+> **Def.: Conjunto cociente**
+
+> > Sea $\mathcal{R}$ una relación de equivalencia sobre $\mathcal{U} \neq \emptyset$.
+
+> > Definimos el conjunto cociente de $\mathcal{U}$ por la relación $\mathcal{R}$ como:
+
+> > $\mathcal{U}/\mathcal{R} := \{[x]: x \in \mathcal{U}\}$ 
+
+Observemos que:
+
+<!--
+dibujo de territorios
+-->
+
+> **Def.: Partición**
+
+> > Dado $\mathcal{U} \neq \emptyset$:
+
+> > La partición ($\mathcal{P}$) de $\mathcal{U}$ es una familia de subconjuntos de $\mathcal{U}$ disjuntos dos a dos y cuya unión es el conjunto $\mathcal{U}$, es decir:
+
+> > si $\mathcal{P} = \{{P_i}\}_{i \in I}$, entonces:
+
+> > > i) $P_i \cap P_j = \emptyset, \forall i \neq j, i,j \in I$
+
+> > > ii) $\bigcup_{i \in I} P_i = \mathcal{U}$
+
+**Nota:** Observemos que si $\mathcal{R}$ es una relación de equivalencia sobre $\mathcal{U} \neq \emptyset$, entonces del conjunto cociente $\mathcal{U}/\mathcal{R}$ es una partición de $\mathcal{U}$.
+
+> **Ejemplo:**
+
+> > En $\mathbb{R}$ definimos la relación $x \mathcal{R} y \iff x-y \in \mathbb{Q}$.
+
+> > Queremos ver que $\mathcal{R}$ es una relación de equivalencia y estudiar $\mathbb{R}/\mathcal{R}$.
+
+> > (1) Reflexividad:
+
+> > > $x \mathcal{R} x \iff x-x \in \mathbb{Q} \iff 0 \in \mathbb{Q}$. \checkmark 
+
+> > (2) Simetría: partimos de $x \mathcal{R} y$, es decir:
+
+> > > $x \mathcal{R} y \iff x-y \in \mathbb{Q} \implies -(x-y) \in \mathbb{Q} \iff y-x \in \mathbb{Q} \iff y \mathcal{R} x$. \checkmark
+
+> > (3) Transitividad:
+
+> > > $x \mathcal{R} y \iff x-y \in \mathbb{Q}$
+
+> > > $y \mathcal{R} z \iff y-z \in \mathbb{Q}$
+
+> > > Sabiendo que la suma de dos números racionales da un número racional:
+
+> > > $a,b \in \mathbb{Q} \implies (a + b) \in \mathbb{Q}$, entonces:
+
+> > > > $(x-y)+(y-z) \in \mathbb{Q} \iff x-z \in \mathbb{Q} \iff x \mathcal{R} z$ \checkmark

@@ -1,0 +1,159 @@
+<!-- set parameters in the R code chunk below -->
+
+```{r echo=FALSE}
+unlockBinding("params", env = .GlobalEnv)
+params$title <- "Lenguaje matemático. Conjuntos y números."
+params$subtitle <- "Grado en Matemáticas UNED"
+params$chapter <- "Aplicaciones entre conjuntos"
+params$abstract <- ""
+params$author <- "Gerlachito's Maths"
+```
+
+\fancypagestyle{fancy}{
+  \fancyhead[OR,EL]{\large `r params$title`}
+  \fancyhead[OL,ER]{\large `r params$chapter`}
+  \fancyhead[C]{}
+  \fancyfoot[OR,EL]{\thepage}
+  \fancyfoot[OL,ER]{\large `r params$author`}
+  \fancyfoot[C]{}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\footrulewidth}{1pt}
+}
+
+\fancypagestyle{firstpage}{
+  \fancyhead[OR,EL]{\large `r params$title`}
+  \fancyhead[OL,ER]{\large `r params$chapter`}
+  \fancyhead[C]{}
+  \fancyfoot[OR,EL]{\thepage}
+  \fancyfoot[OL,ER]{\large `r params$author`}
+  \fancyfoot[C]{}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\footrulewidth}{1pt}
+}
+
+\renewcommand{\maketitle}{
+  \thispagestyle{firstpage}  
+    \Huge
+    \textbf{`r params$chapter`}
+    \par
+    \vspace{1cm}
+    \large
+    \textbf{`r params$abstract`}
+    \par
+    \vspace{1cm}
+}
+
+\pagestyle{fancy}
+\newpage
+\maketitle
+
+\fontsize{0.4cm}{0.45cm}\selectfont
+
+<!-- start writing your RMarkdown document below -->
+
+Dados dos conjuntos, $A,B \neq \emptyset$ habíamos estudiado el concepto de relación o correspondencia sobre $A \times B$ como un cierto subconjunto $\mathcal{R} \subset A \times B$.
+
+$(a,b) \in \mathcal{R} \subset A \times B \iff \mathcal{R}(a) = b \iff a \mathcal{R} b$
+
+Ahora, nos interesa que dado un elemento $a \in A$, exista como mucho un elemento $b \in B$ tal que $a \mathcal{R} b$, y escribimos $\mathcal{R}(a) = b$.
+
+Antes teníamos el caso de $\mathcal{R} \subset A \times B$, es decir, $(a,b) \in \mathcal{R}$. Ahora con otra notación $\mathcal{R}: A \to B$, es decir, $\mathcal{R}(a) = b$.
+
+> **Def.: Conjunto inicial, final, dominio e imagen**
+
+> > Sea $f: A \to B$ una relación. Decimos que $f$ es una aplicación de A en B si cada elemento de A se le asocia un único elemento de B.
+
+> > LLamamos:
+> > 
+> > (1) Conjunto inicial de f al conjunto A. 
+> > 
+> > (2) Dominio de f al conjunto: $Dom(f) = A$.
+> > 
+> > (2) Conjunto final de f al conjunto B.
+> > 
+> > (3) Imagen, rango o recorrido de f al conjunto: $Im(f) = R(f) := \{f(a): a \in A\} \subset B$.
+
+Si tenemos una aplicación $f: A \to B$ y consideramos $C \subset A, D \subset B$, entonces tabién podemos definir:
+
+(1) Conjunto imagen de C:
+
+> $f(C) := \{f(c): c \in C\}$
+
+(2) Conjunto antiimagen de D:
+
+> $f^{A}(D) := \{a \in A: f(a) \in D\} \subset A$
+
+Si $A,B$ son conjuntos no vacíos, vamos a denotar mediante $\mathcal{F}(A,B)$ al conjunto de todas las aplicaciones $f: A \to B$. También es usual:
+
+$\mathcal{F}(A,B) = B^A$
+
+Observemos que una aplicación $f: A \to B$ es una relación que verifica:
+
+$(a,b_1), (a,b_2) \in f \iff b_1 = b_2$
+
+Si entendemos la aplicación $f: A \to B$ como una relación $f \subset A \times B$, podemos definir la relación inversa $f^{-1} \subset B \times A$, es decir, $f^{-1}: B \to A$ dado por:
+
+$f^{-1} = \{(b,a) \in B \times A: (a,b) \in f\}$
+
+Esta relación inversa $f^{-1}$ no tiene por qué ser una aplicación. Es decir:
+
+$f$ es aplicación $\implies$ $f$ es relación $\iff f^{-1}$ es relación $\centernot\implies$ $f^{-1}$ es aplicación
+
+Si tenemos dos aplicaciones $f: A \to B$ y $g: A' \to B'$, diremos que son iguales si:
+
+(1) $A = A'$
+
+(2) $B = B'$
+
+(3) $f(a) = g(a), \forall a \in A$
+
+**Ej.: Aplicaciones que parecen la misma pero no lo son**
+
+> $f: \mathbb{R} \to \mathbb{R}$, $x \mapsto x^2 + 5$
+
+> $g: \mathbb{R} \to [0,\rightarrow)$, $x \mapsto x^2 +5$
+
+> $h: [0,1] \to \mathbb{R}$, $x \mapsto x^2 + 5$
+
+Ninguna de estas aplicaciones son lo mismo, aunque la forma explícita (parte derecha) son la misma.
+
+Si el dominio y el conjunto final no son los mismos, las aplicaciones no son la misma.
+
+> **Def.: Composición de aplicaciones**
+
+> > Sean $f \in \mathcal{F}(A,B), g \in \mathcal{F}(B,C)$.
+
+> > Se define la composición de f con g como la aplicación $g \circ f \in \mathcal{F}(A,C)$ dada por:
+
+> > $(g \circ f)(a) := g(f(a))$
+
+> > **Nota**: No es lo mismo (en general) $g \circ f$ que $f \circ g$. Incluso puede que alguna de ellas no esté definida.
+
+> **Def.: Inyectividad**
+
+> > Sea $f: A \to B$ una aplicación
+
+> > Decimos que $f$ es:
+
+> > (1) Inyectiva si:
+
+> > > $f(x) = f(\tilde{x}) \implies x = \tilde{x}$ (ó si $x \neq \tilde{x} \implies f(x) \neq f(\tilde{x})$)
+
+> > (2) Sobreyectiva si:
+
+> > > $\forall y \in B, \exists x \in A$ tal que $f(x) = y$ (con $Im(f) = B$)
+
+> > (3) Biyectiva si: es inyectiva y sobreyectiva.
+
+Si $f: A \to B$ es inyectiva, entonces la relación inversa $f^{-1}: B \to A$ es también una aplicación.
+
+Por reducción al absurdo, supongamos que $f^{-1}$ no es aplicación, esto implicaría que:
+
+> $\exists (b,a_1), (b,a_2) \in f^{-1}$ con $a_1 \neq a_2$
+
+> > $f^{-1}(b) = a_1 \iff (a_1,b) \in f \iff f(a_1) = b$
+
+> > $f^{-1}(b) = a_2 \iff (a_2,b) \in f \iff f(a_2) = b$
+
+> > Llegamos a una contradicción, ya que esto no se puede cumpir si partimos de que $f$ es inyectiva.
+

@@ -1,0 +1,154 @@
+<!-- set parameters in the R code chunk below -->
+
+```{r echo=FALSE}
+unlockBinding("params", env = .GlobalEnv)
+params$title <- "Lenguaje matemático. Conjuntos y números."
+params$subtitle <- "Grado en Matemáticas UNED"
+params$chapter <- "Relaciones de orden"
+params$abstract <- ""
+params$author <- "Gerlachito's Maths"
+```
+
+\fancypagestyle{fancy}{
+  \fancyhead[OR,EL]{\large `r params$title`}
+  \fancyhead[OL,ER]{\large `r params$chapter`}
+  \fancyhead[C]{}
+  \fancyfoot[OR,EL]{\thepage}
+  \fancyfoot[OL,ER]{\large `r params$author`}
+  \fancyfoot[C]{}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\footrulewidth}{1pt}
+}
+
+\fancypagestyle{firstpage}{
+  \fancyhead[OR,EL]{\large `r params$title`}
+  \fancyhead[OL,ER]{\large `r params$chapter`}
+  \fancyhead[C]{}
+  \fancyfoot[OR,EL]{\thepage}
+  \fancyfoot[OL,ER]{\large `r params$author`}
+  \fancyfoot[C]{}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\footrulewidth}{1pt}
+}
+
+\renewcommand{\maketitle}{
+  \thispagestyle{firstpage}  
+    \Huge
+    \textbf{`r params$chapter`}
+    \par
+    \vspace{1cm}
+    \large
+    \textbf{`r params$abstract`}
+    \par
+    \vspace{1cm}
+}
+
+\pagestyle{fancy}
+\newpage
+\maketitle
+
+\fontsize{0.4cm}{0.45cm}\selectfont
+
+<!-- start writing your RMarkdown document below -->
+
+Una relación $\mathcal{O}$ sobre un conjunto $\mathcal{U} \neq \emptyset$ se llama relación de orden si es reflexiva, antisimétrica y transitiva. El par $(\mathcal{U},\mathcal{O})$ se llama conjunto ordenado.
+
+Podemos clasificar las relaciones de orden en dos subcategorías:
+
+(1) Orden total: si $\mathcal{O} \cup \mathcal{R}^{-1} = \mathcal{U} \times \mathcal{U}$, i.e., $\forall x,y \in \mathcal{U}, x \mathcal{R} y \lor y \mathcal{R} x$.
+
+(2) Orden parcial: si no es de orden total.
+
+Sea $(\mathcal{U},\mathcal{O})$ o con otra notación ? un conjunto ordenado y $a.b \in \mathcal{U}$ con $a \mathcal{O} b$. Definimos:
+
+(1) Intervalo abierto: $(a,b) := \{x \in \mathcal{U}: a \mathcal{O} x \mathcal{O} b\}$
+
+(2) Intervalo cerrado: $[a,b] := \{x \in \mathcal{U}: a \mathcal{O} x \mathcal{O} b\}$
+
+(3) Intervalos semiabiertos:
+
+> $(a,b] := \{x \in \mathcal{U}: a \mathcal{O} x \mathcal{O} b\}$
+
+> $[a,b) := \{x \in \mathcal{U}: a \mathcal{O} x \mathcal{O} b\}$
+
+(4) Intervalo inicial abierto: $(\leftarrow, b] := \{x \in \mathcal{U}: x \mathcal{O} b\}$
+
+(5) Intervalo final abierto: $[a, \rightarrow) := \{x \in \mathcal{U}: a \mathcal{O} x\}$
+
+> **Def.: Cotas inferiores y superiores. Supremo e ínfimo. Máximos y mínimos.**
+
+> Sea $\mathcal{U},\mathcal{O}$ un conjunto ordenado y $A \subset \mathcal{U}$. Tenemos:
+
+> > (1) $M \in \mathcal{U}$ es una cota superior de $A$ si $a \mathcal{O} M, \forall a \in A$.
+
+> > (2) $m \in \mathcal{U}$ es una cota inferior de A si $m \mathcal{O} a \forall a \in A$
+
+> > (3) Llamamos supremo de A a la menor de las cotas superiores del conjunto A:
+
+> > > $\alpha = sup(A) \in \mathcal{U} := min \{M \in \mathcal{U}: M$ cota superior de $A\}$
+
+> > > Si $sup(A) \in A$, entonces lo llamamos máximo y escribimos $\alpha = max(A)$.
+
+> > (4) Llamamos ínfimo de A a la mayor de las cotas inferiores de A:
+
+> > > $\beta = inf(A) := max \{m \in \mathcal{U}: m$ cota inferior de $A\}$.
+
+> > > Si $inf(A) \in A$, lo llamamos mínimo ($\beta = min(A)$).
+
+Dado $A \subset \mathcal{U}$ con $(\mathcal{U}, \mathcal{O})$ conjunto ordenado decimos que A está:
+
+(1) superiormente acotado si $\exists M \in \mathcal{U}$ cota superior de A.
+
+(2) inferiormente acotado si $\exists m \in \mathcal{U}$ cota inferior de A.
+
+(3) acotado si está superior e inferiormente acotado.
+
+**Proposición:** Sea $\mathcal{U},\mathcal{O})$ un conjunto ordenado y $A \subset \mathcal{U}$. Entonces:
+
+(1) Si existen máximo o mínimo de A, son únicos.
+
+(2) Si existen supremo o ínfimo de A, son únicos.
+
+> **Def.: Propiedad del buen orden**
+
+> La propiedad del buen orden nos dice que si $(\mathcal{U},\mathcal{O})$ es un conjunto ordenado, entonces está bien ordenado si $\forall A \subset \mathcal{U}$ con $A \neq \emptyset$ se tiene que A posee mínimo (y dicho elemento lo llamamos primer elemento).
+
+Por otro lado, decimos que $\mathcal{U},\mathcal{O})$ verifica la propiedad del supremo si $\forall A \subset \mathcal{U}$ acotado superiormente existe $sup(A)$.
+
+Existen dos resultados que nos permiten caracterizar la existencia de supremo e ínfimo:
+
+- Axioma del supremo:
+
+<!--
+dibujo de la caja inferior
+-->
+
+> $\alpha = sup(A) \iff \forall \epsilon > 0, \exists a \in A$ tal que $\alpha - \epsilon < a <= \alpha$.
+
+- Axioma del ínfimo:
+
+<!--
+dibujo de caja superior
+-->
+
+> $\beta = inf(A) \iff \forall \epsilon > 0, \exists a \in A$ tal que $\beta <= a < \beta + \epsilon$
+
+> **Def.: Maximal y minimal**
+
+> Sea $(\mathcal{U},\mathcal{O})$ un conjunto ordenado y $A \subset \mathcal{U}$. Entonces:
+
+> (1) Llamamos maximal de A a $M \in A$ tal que:
+
+> > $\nexists a \in A, a \neq M$ con $M \mathcal{O} a$
+
+> (2) Llamamos minimal de A a $m \in A$ tal que:
+
+> > $\nexists a \in A, a \neq m$ con $a \mathcal{O} m$
+
+**Nota:** En general puede haber varios elementos maximales o minimales. Si $\mathcal{O}$ es de orden total, entonces:
+
+> máximo = maximal
+
+> mínimo = minimal
+
+
