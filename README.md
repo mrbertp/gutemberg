@@ -95,3 +95,13 @@ It will be useful if you use a PDF viewer with the ability to autoreload the PDF
 For Linux, I would recommend using **zathura**, which you can install via apt-get: `sudo apt-get zathura`.
 
 For Windows, I would recommend using **SumatraPDF**, which you can download from its official [website](https://www.sumatrapdfreader.org/free-pdf-reader) and install it.
+
+## Troubleshooting
+
+### Re-install / Update tinytex
+
+If in the error messages you find anything dealing with versions or updates of latex packages or tinytex (Latex distribution), it may help to reinstall tinytex by running:
+
+```./installer/installer.sh```
+
+After running this successfully, retry compiling your document.
