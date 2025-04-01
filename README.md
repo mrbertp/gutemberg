@@ -1,10 +1,10 @@
-# gutemberg
+# 📖 gutemberg 🖋️
 
-## Introduction
+## 🔰 Introduction
 
 gutemberg is a tool for automatic and modular document typesetting and formatting.
 
-## Prerequisites
+## ☑️ Prerequisites
 
 A. Using Windows:
     
@@ -18,7 +18,7 @@ For both options, you will also need to install:
 
    - git (`sudo apt-get install git`)
 
-## Installation
+## 🏗️ Installation
 
 1. Get this repository in your computer:
 
@@ -56,13 +56,13 @@ For both options, you will also need to install:
       - install *rmarkdown*, from R
       - install *tinytex*, from R
 
-## Usage
+## ✍️ Usage
 
 For information on how to use gutemberg, refer to the command help, executing:
 
 `./scripts/gutemberg -h`
 
-## Extras
+## ➕ Extras
 
 You may find any of the following things useful when using gutemberg:
 
@@ -96,7 +96,7 @@ For Linux, I would recommend using **zathura**, which you can install via apt-ge
 
 For Windows, I would recommend using **SumatraPDF**, which you can download from its official [website](https://www.sumatrapdfreader.org/free-pdf-reader) and install it.
 
-## Troubleshooting
+## 🛠️ Troubleshooting
 
 ### Re-install / Update tinytex
 
